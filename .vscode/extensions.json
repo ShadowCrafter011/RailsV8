@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "shopify.ruby-lsp",
+        "misogi.ruby-rubocop",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode-remote.remote-containers"
+    ]
+}

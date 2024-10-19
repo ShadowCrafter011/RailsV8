@@ -1,0 +1,20 @@
+services:
+  rails:
+    build:
+      context: .
+      dockerfile: development.Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - dev-db-data:/var/lib/postgresql/data
+
+volumes:
+  dev-db-data:
