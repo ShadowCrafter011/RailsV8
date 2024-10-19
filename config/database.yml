@@ -24,7 +24,7 @@ development:
   database: rails_v8_template_development
   host: postgres
   username: postgres
-  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD", nil) %>
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -61,7 +61,7 @@ test:
   database: rails_v8_template_test
   host: postgres
   username: postgres
-  password: <%= ENV.fetch("POSTGRES_PASSWORD", "abc") %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD", "nil") %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
