@@ -38,6 +38,3 @@ RUN npm install
 
 # Copy application code
 COPY . .
-
-# Entrypoint prepares the database.
-ENTRYPOINT ["/rails/bin/docker-entrypoint"]
