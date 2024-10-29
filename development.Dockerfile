@@ -2,11 +2,9 @@
 # check=error=true
 
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version
-ARG RUBY_VERSION=3.3.0
-FROM docker.io/library/ruby:$RUBY_VERSION-slim AS base
+FROM ruby:3.3
 
-# Rails app lives here
-WORKDIR /rails
+WORKDIR /workspace
 
 # Install base packages
 RUN apt-get update -qq && \
@@ -15,7 +13,6 @@ RUN apt-get update -qq && \
 # Set production environment
 ENV RAILS_ENV="development" \
     BUNDLE_WITHOUT=""
-
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
@@ -35,6 +32,3 @@ RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
 ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 COPY package.json package-lock.json ./
 RUN npm install
-
-# Copy application code
-COPY . .

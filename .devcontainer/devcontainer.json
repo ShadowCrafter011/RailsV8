@@ -4,7 +4,7 @@
     "name": "Rails v8 Template",
     "dockerComposeFile": "../compose.yml",
     "service": "rails",
-    "workspaceFolder": "/rails",
+    "workspaceFolder": "/workspace",
     "shutdownAction": "stopCompose",
     "customizations": {
         "vscode": {
