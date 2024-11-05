@@ -5,7 +5,17 @@ This is a Rails version 8 template setup for development in [dev containers](htt
 ## Setup
 
 To start working you first need to create a new repository from this template. If you have the [dev containers](https://code.visualstudio.com/docs/devcontainers/containers) extension already installed in VSCode you can open the command palette using Ctrl+Shift+P. Then you can execute the command "Dev Containers: Clone Repository in Container Volume...". You will need to supply the repository URL in the next dialog window.
-If you encounter an error related to the workspace not being found click select workspace and use the directory /workspace. Once the container is spun up you need to execute `npm install` and `bin/rails db:setup`. Make sure you are in the Rails root directory.
+If you encounter an error related to the workspace not being found click select workspace and use the directory /workspace.
+
+Once the container is spun up you need to change the name of the Rails application:
+
+- rails_v8_template => new_name
+- RAILS_V8_TEMPLATE => NEW_NAME
+- RailsV8Template => NewName
+
+Make sure you match the case if using replace all.
+
+Once the name is switched you need to execute `npm install` and `bin/rails db:setup` from the Rails root directory.
 
 ## Testing
 
