@@ -9,13 +9,13 @@ If you encounter an error related to the workspace not being found click select 
 
 Once the container is spun up you need to change the name of the Rails application:
 
-- rails_v8_template => new_name
-- RAILS_V8_TEMPLATE => NEW_NAME
-- RailsV8Template => NewName
+-   rails_v8_template => new_name
+-   RAILS_V8_TEMPLATE => NEW_NAME
+-   RailsV8Template => NewName
 
 Make sure you match the case if using replace all.
 
-Once the name is switched you need to execute `npm install` and `bin/rails db:setup` from the Rails root directory.
+Once the name is switched you need to execute `bin/rails db:setup` from the Rails root directory.
 
 ## Testing
 
